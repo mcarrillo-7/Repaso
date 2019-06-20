@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.ipartek.formacion.modelo.DAOAlumnoArrayList;
 import com.ipartek.formacion.modelo.ICrudAble;
 
 public class Aula extends Person implements ICrudAble{
@@ -17,11 +18,13 @@ public class Aula extends Person implements ICrudAble{
 	static final int OPCION_ELIMINAR = 3;
 	static final int OPCION_BUSCAR_VOLUNTARIO = 4;
 	static final int OPCION_SALIR = 5;
+	static DAOAlumnoArrayList dao;
 	static boolean bool = true;
 
 	public static void main(String[] args) {
 		
 		sc = new Scanner(System.in);
+		dao = new DAOAlumnoArrayList();
 
 		do {
 			System.out.println("1. Listar alumno + ranking");
@@ -36,8 +39,7 @@ public class Aula extends Person implements ICrudAble{
 				System.out.println("Opcion no disponible");
 			}
 
-			int numeroTeclado = 0;
-			numeroTeclado = Integer.parseInt(sc.nextLine());
+			
 			switch (numeroTeclado) {
 			case OPCION_LISTAR:
 				listar();
@@ -80,7 +82,7 @@ public class Aula extends Person implements ICrudAble{
 	public static void eliminarAlumno() {
 		System.out.println("Escribe el nombre de la persona que quieres borrar");
 		String name1 = sc.nextLine();
-		listaPersonas.remove(name1);
+		//dao.delete(id)
 
 	}
 
@@ -103,9 +105,8 @@ public class Aula extends Person implements ICrudAble{
 				//System.out.println("---" + listaPersonas.get(numero));
 			}
 		}*/
-		for (Person alumno : listaPersonas) {
-			
-			
+		for (Person alumno : dao.getAll() ) {
+			//System.out.println( alumno.getNumVecesLeer() + " " + alumno.getNombre() );
 		}
 
 	}
