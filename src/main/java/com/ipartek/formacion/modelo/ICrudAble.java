@@ -13,11 +13,13 @@ import java.util.ArrayList;
  */
 public interface ICrudAble {
 	
+	
+	
 	List<Person> getAll();//leemos
 	
 	Person getById(int id);//cogemos
 	
-	boolean insert(Person pojo);//añadimos
+	boolean insert(Person pojo);//aï¿½adimos
 	
 	boolean delete(int id);//eliminamos
 	

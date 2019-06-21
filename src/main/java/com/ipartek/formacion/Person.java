@@ -10,7 +10,7 @@ public class Person implements IAmigable{
 	
 	//Atributos privados para encapsular
 	
-	private int id;
+	protected int id;
 	
 	public int getId() {
 		return id;
@@ -33,7 +33,7 @@ public class Person implements IAmigable{
 	
 	private char sexo;  //"h" hombre, "m" mujer, "i" indefinido
 	
-	//hacemos un constructor donde la persona por defecto va a tener nombre "Anonimo", la edad 18 años, altura 0, peso 0
+	//hacemos un constructor donde la persona por defecto va a tener nombre "Anonimo", la edad 18 aï¿½os, altura 0, peso 0
 	//ojos marrones y sexo i de indefinido. sobrecargar el constructor para poder crear una persona indicando el nombre, la edad y el sexo
 	public String saludar() {
 		
@@ -54,7 +54,14 @@ public class Person implements IAmigable{
 	}
 
 	
-//constructor sobrecargado con todos los atributos
+public Person(int id, String nombre) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+	}
+
+
+	//constructor sobrecargado con todos los atributos
 	public Person(String nombre) {
 		this();
 		this.nombre = nombre;
@@ -142,6 +149,13 @@ public class Person implements IAmigable{
 	public String mandarAlaMierda() {
 		// TODO Auto-generated method stub
 		return "Hasta nunca pringao";
+	}
+
+
+	@Override
+	public String despedir() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

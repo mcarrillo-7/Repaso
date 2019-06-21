@@ -11,4 +11,6 @@ public interface IAmigable {
 	
 	String mandarAlaMierda(); //prototipo
 
+	String despedir();
+
 }
