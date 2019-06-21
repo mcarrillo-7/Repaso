@@ -1,5 +1,10 @@
 package com.ipartek.formacion;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,6 +23,8 @@ public class AppVoluntario {
 	static Scanner sc;
 	static ArrayList<Alumno> lista;
 	static DAOAlumnoArrayList dao;
+
+	
 	
 	
 	
@@ -27,7 +34,7 @@ public class AppVoluntario {
 		dao = new DAOAlumnoArrayList();
 		lista = new ArrayList<Alumno>();
 		//dao = DAOAlumnoArrayList.getInstance();
-		lista.add(new Alumno(1, "Ander"));
+		/*lista.add(new Alumno(1, "Ander"));
 		lista.add(new Alumno(2, "Mounir"));
 		lista.add(new Alumno(3, "Andoni"));
 		lista.add(new Alumno(4, "Asier"));
@@ -40,7 +47,7 @@ public class AppVoluntario {
 		lista.add(new Alumno(11, "Borja"));
 		lista.add(new Alumno(12, "Verónica"));
 		lista.add(new Alumno(13, "Jon A"));
-		lista.add(new Alumno(14, "Jose Luis"));
+		lista.add(new Alumno(14, "Jose Luis"));*/
 		
 		// dao.getById(id)
 		
@@ -86,6 +93,15 @@ public class AppVoluntario {
 		
 		try {
 		
+			
+			String ficheroVoluntarios = "C:\\1713\\eclipse-workspace\\textos\\alumnos.txt";
+			FileWriter fw = new FileWriter(ficheroVoluntarios);
+			BufferedWriter bw = new BufferedWriter(fw);
+			//BufferedReader br = new BufferedReader(new FileReader(ficheroVoluntarios));
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ficheroVoluntarios));
+			oos.writeObject(lista);
+			oos.flush();
+			
 			//pedir datos por consola
 			System.out.println("Dime el NOMBRE:");
 			String nombre = sc.nextLine();
