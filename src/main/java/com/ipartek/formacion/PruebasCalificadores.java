@@ -1,3 +1,5 @@
+package com.ipartek.formacion;
+
 import com.ipartek.formacion.Perro;
 
 public class PruebasCalificadores {

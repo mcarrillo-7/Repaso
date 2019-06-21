@@ -185,8 +185,8 @@ public class Aula extends Person implements ICrudAble{
 
 /*
  * String[] Alumnos = { "Mounir", "Andoni", "Asier", "JonC", "Arkaitz", "Aritz",
- * "Manuel", "Eduardo", "Eder I", "Eder S", "Gaizka", "Borja", "Verónica",
- * "Jon A", "José Luis"};
+ * "Manuel", "Eduardo", "Eder I", "Eder S", "Gaizka", "Borja", "Verï¿½nica",
+ * "Jon A", "Josï¿½ Luis"};
  * 
  * // generar numero aleatorio
  * 
