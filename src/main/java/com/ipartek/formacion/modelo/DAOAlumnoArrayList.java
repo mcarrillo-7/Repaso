@@ -10,7 +10,7 @@ import com.ipartek.formacion.Perro;
 public class DAOAlumnoArrayList implements IPersistible<Alumno> {
 
 	private static DAOAlumnoArrayList INSTANCE;
-	private ArrayList<Alumno> lista;
+	private static ArrayList<Alumno> lista;
 	
 	/**
 	 * Encargado de devolver solo 1 objeto, patron Singleton	
@@ -29,15 +29,21 @@ public class DAOAlumnoArrayList implements IPersistible<Alumno> {
 	/**
 	 * Privado para que nadie pueda crear objetos
 	 */
-	public DAOAlumnoArrayList() {
+	private DAOAlumnoArrayList() {
 		super();
-		lista = new ArrayList<Alumno>();		
+		lista = new ArrayList<Alumno>();
+		
 	}
 
+
+
 	@Override
-	public List<Alumno> getAll() {		
+	public List<Alumno> getAll() {
+		
 		return lista;
 	}
+
+	
 
 	@Override
 	public Alumno getById(int id) {
