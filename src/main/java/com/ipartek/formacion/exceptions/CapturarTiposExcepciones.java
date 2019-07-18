@@ -1,11 +1,11 @@
 package com.ipartek.formacion.exceptions;
 
-import com.ipartek.formacion.Perro;
 import com.ipartek.formacion.PerroException;
+import com.ipartek.formacion.modelo.pojo.Perro;
 
 /**
- * Se pueden capturar más de un tipo de excepciones Siempre la ultima en
- * capturar que sea Exception, que es la más generica
+ * Se pueden capturar mï¿½s de un tipo de excepciones Siempre la ultima en
+ * capturar que sea Exception, que es la mï¿½s generica
  * 
  * @author Curso
  *
@@ -15,10 +15,10 @@ public class CapturarTiposExcepciones {
 	public static void main(String[] args) {
 
 		try {
-			Perro perro = null; // no está reservada en la memoria, no existe
+			Perro perro = null; // no estï¿½ reservada en la memoria, no existe
 			perro.setEdad(-2);
 			perro.toString();
-		} // daría NullPointerException porque es un dato que no existe
+		} // darï¿½a NullPointerException porque es un dato que no existe
 
 		catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Se ha salido fuera del array");
@@ -29,7 +29,7 @@ public class CapturarTiposExcepciones {
 		} catch (NullPointerException e) {
 			System.out.println("Excepcion null");
 		} catch (Exception e) {
-			System.out.println("Excepción generica, siempre la última");
+			System.out.println("Excepciï¿½n generica, siempre la ï¿½ltima");
 			e.printStackTrace();
 		}
 	}

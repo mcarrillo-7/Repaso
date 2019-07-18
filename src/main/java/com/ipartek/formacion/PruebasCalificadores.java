@@ -1,6 +1,6 @@
 package com.ipartek.formacion;
 
-import com.ipartek.formacion.Perro;
+import com.ipartek.formacion.modelo.pojo.Perro;
 
 public class PruebasCalificadores {
 

@@ -1,5 +1,7 @@
 package com.ipartek.formacion;
 
+import com.ipartek.formacion.PerroException;
+
 public class Perro {
 	
 	//stributos privados para encapsular
@@ -62,7 +64,7 @@ public class Perro {
 	}
 	/**
 	 * Setteamos la edad del perro, en el caso de ser menor que 0, ponemos un 0
-	 * @param edad int  valor en años
+	 * @param edad int  valor en aï¿½os
 	 * @throws Exception la edad tiene que ser mayor que 0 
 	 */
 	public void setEdad(int edad) throws Exception {

@@ -1,0 +1,17 @@
+<!--estaria bien haber puesto .dtd  y prologo-->
+<perros>
+<perro>
+	<nomrbre>Bubba</nomrbre>
+	<raza>Boxer</raza>
+	<edad>2</edad>
+	<vacunado>true</vacunado>
+</perro>
+
+<perro>
+	<nomrbre>Pulgas</nomrbre>
+	<raza>Mezcla</raza>
+	<edad>5</edad>
+	<vacunado>false</vacunado>
+</perro>
+
+</perros>

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.ipartek.formacion.Alumno;
-import com.ipartek.formacion.Perro;
+import com.ipartek.formacion.modelo.pojo.Perro;
 
 public class DAOAlumnoArrayList implements IPersistible<Alumno> {
 
